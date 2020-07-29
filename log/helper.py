@@ -66,7 +66,7 @@ def logger_of_size(max_byte=1000):
     logger.setLevel(default_level)
 
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    handler = handlers.TimedRotatingFileHandler("log_folder/size_app.log", maxBytes=max_byte, backupCount=1)
+    handler = handlers.RotatingFileHandler("log_folder/size_app.log", maxBytes=max_byte, backupCount=1)
     handler.setLevel(default_level)
     handler.setFormatter(formatter)
 
